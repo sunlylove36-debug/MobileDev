@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="$FLUTTER_BASE_HREF" />
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="LuyLeun Clone - Flutter Financial Lending App"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="LuyLeun Clone" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>LuyLeun Clone</title>
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      // The value below is injected by flutter build, do not touch.
+      const serviceWorkerVersion = null;
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #1565c0, #42a5f5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 600px;
+        padding: 2rem;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 24px;
+        margin: 0 auto 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        color: #1565c0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 2rem;
+      }
+
+      .features {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+      }
+
+      .feature {
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+      }
+
+      .setup-info {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+      }
+
+      .spinner {
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 1rem auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        background: white;
+        color: #1565c0;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0.5rem;
+        transition: transform 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">💰</div>
+      <h1>LuyLeun Clone</h1>
+      <p class="subtitle">Flutter Financial Lending App</p>
+
+      <div class="features">
+        <h3>✨ Features Included</h3>
+        <div class="feature">🔐 User Authentication System</div>
+        <div class="feature">📊 Interactive Financial Dashboard</div>
+        <div class="feature">💵 Loan Application Process</div>
+        <div class="feature">📁 Document Upload & Verification</div>
+        <div class="feature">🎨 Modern Material Design UI</div>
+      </div>
+
+      <div class="setup-info">
+        <h3>🚀 To Run This App</h3>
+        <p>Install Flutter SDK and run:</p>
+        <code
+          style="
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 8px 0;
+          "
+        >
+          flutter run -d web-server --web-port=8080
+        </code>
+        <br /><br />
+        <a
+          href="https://flutter.dev/docs/get-started/install"
+          class="btn"
+          target="_blank"
+        >
+          Install Flutter
+        </a>
+        <a
+          href="https://github.com/sunlylove36-debug/MobileDev"
+          class="btn"
+          target="_blank"
+        >
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="spinner"></div>
+      <p style="opacity: 0.8; margin-top: 1rem">
+        Waiting for Flutter to initialize...
+      </p>
+    </div>
+
+    <script>
+      window.addEventListener("load", function (ev) {
+        // Download main.dart.js
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            engineInitializer.initializeEngine().then(function (appRunner) {
+              appRunner.runApp();
+            });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
